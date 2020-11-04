@@ -1,0 +1,18 @@
+/*Напишите функцию minOdd, которая принимает массив arr в качестве аргумента 
+и возвращает минимальный нечетный элемент массива. 
+Если массив не содержит нечетных элементов или массив пустой, вернуть undefined.
+Используйте в решении цикл. Не разрешается использование метода Math.min().
+*/
+
+function minOdd(arr){
+  if(arr.length === 0) return undefined;
+   let k = 0;
+   while (arr[k] % 2 === 0 ){
+   k++
+   }
+   let min = arr[k];
+   for (let i = k+1; i < arr.length; i++){
+    if(arr[i] % 2 && arr[i] < min) min = arr[i]
+    }
+   return min;
+}
