@@ -1,0 +1,18 @@
+/*
+Определить, какой день был самым холодным. Если самая низкая температура была несколько дней, вернуть последний день.
+*/
+
+function theColdestDay(arr){
+  let min = arr.length-1;
+  let k = 0;
+  for (let i = arr.length - 1; i >= 0; i--){
+    if(arr[i] < min) {
+      min = arr[i];
+      k = i + 1;
+    }
+  }
+  return "April " + k + " was the coldest day of the month: it was " + arr[k-1] + " degrees."
+}
+
+//console.log(theColdestDay([13,17,15,20,19,12,11,10,10,15,10,20,16,17,11,13,12,19,9,19,16,19,14,12,9,15,15,19,17,17]));
+//"April 25 was the coldest day of the month: it was 9 degrees."
